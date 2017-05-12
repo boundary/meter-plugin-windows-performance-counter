@@ -37,9 +37,10 @@ end
 --
 file = io.open("win_pdh_test_pdh.ini", "w")
 
-if (params.pollInterval ~= nil) then
-    file:write("interval_sec=" .. params.pollInterval .. "\n")
-end
+--if (params.pollInterval ~= nil) then
+--    file:write("interval_sec=" .. params.pollInterval .. "\n")
+--end
+file:write("interval_sec=2\n")
 
 for k, v in pairs(metrics) do
 	file:write("[".. k .. "]\n")
