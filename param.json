@@ -1,4 +1,13 @@
 {
-	"pollInterval" : 500,
-	"source" : "Development Host"
+    "items": [
+       {
+		   "metric":"PDH_PROCESSES",
+	       "counter":"\\System\\Processes"
+       },
+       {
+		   "metric":"PDH_THREADS",
+	       "counter":"\\System\\Threads"
+	   }
+    ],
+	"pollInterval": 2
 }

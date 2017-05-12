@@ -1,37 +1,45 @@
 {
   "name" : "TrueSight Pulse Win PDH Test",
-  "version" : "0.9.4",
-  "meterVersionRequired" : "4.2.0-611",
+  "version" : "0.0.1",
+  "meterVersionRequired" : "4.6.2",
   "unsupportedPlatforms" : [ ],
-  "tags" : "cpu,core",
-  "description" : "Provides per core CPU utilization",
+  "tags" : "windows,pdh",
+  "description" : "Generic specification for Windows performance counters",
   "dashboards" : [
                  {
-                 "name" : "CPU Core",
-                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-CPU_CORE=0-0-1-1"
+                 "name" : "WIN PDH",
+                 "layout" : "d-w=1&d-h=1&d-pad=5&d-bg=none&d-g-WIN_PDH=0-0-1-1"
                  }
   ],
-  "command" : "node index.js $(pollInterval)",
+  "command" : "",
   "command_lua" : "boundary-meter init.lua",
-  "postExtract" : "npm install",
+  "postExtract" : "",
   "postExtract_lua" : "",
   "ignore" : "node_modules",
-  "metrics" : ["CPU_CORE"],
+  "metrics" : ["DUMMY_METRIC"],
+  "paramArray" : { "itemTitle" : ["metric", "counter"], "schemaTitle" : "Window Counter"},
   "paramSchema": [
     {
-      "title": "Poll Interval (ms)",
-      "name": "pollInterval",
-      "description": "How often (in milliseconds) to poll the system for metrics.",
-      "type" : "integer",
-      "default" : 1000,
-      "required" : false
+      "title": "Metric Name",
+      "name": "metric",
+      "description": "The name of the metric the counter will be mapped to.",
+      "type" : "string",
+      "required" : true
     },
     {
-      "title": "Source",
-      "name": "source",
-      "description": "The Source to display in the legend for the CPU Core data.  It will default to the hostname of the server.",
-      "type": "string",
+      "title": "Counter",
+      "name": "counter",
+      "description": "The counter path for the windows performance metric",
+      "type" : "string",
+      "required" : true
+    },
+    {
+      "title": "Factor",
+      "name": "factor",
+      "description": "The multiplication factor for the metric",
+      "type" : "integer",
+      "default" : "1.0",
       "required" : false
-    }
+    },
   ]
 }
