@@ -40,6 +40,6 @@
       "type" : "integer",
       "default" : "1.0",
       "required" : false
-    },
+    }
   ]
 }
