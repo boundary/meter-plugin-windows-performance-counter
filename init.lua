@@ -1,3 +1,4 @@
+local os = require('os')
 local io = require('io')
 local json = require('json')
 
@@ -54,3 +55,10 @@ file:close()
 --
 
 print ("_bevent:"..plugin_info.name.." version " .. plugin_info.version .. " Started|t:info")
+
+while true do
+	local wait = assert(io.popen('sleep 60', 'r'))
+	local output = wait:read('*all')
+	wait:close()
+end
+
