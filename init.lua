@@ -35,7 +35,7 @@ end
 -- The filename needs to be [plugin_name]_pdh.ini
 --
 --
-file = io.open("win_pdh_test_pdh.ini", "w")
+file = io.open("plugin_pdh.ini", "w")
 
 --if (params.pollInterval ~= nil) then
 --    file:write("interval_sec=" .. params.pollInterval .. "\n")
