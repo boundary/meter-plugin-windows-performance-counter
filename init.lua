@@ -42,6 +42,7 @@ for k, v in pairs(metrics) do
 	file:write("  counter=".. v.counter.."\n")
 	if (v.factor ~= nil) then
 	    file:write("  factor=".. v.factor.."\n")
+	end
 	if (v.interval ~= nil) then
 	    file:write("  interval_sec=".. v.interval.."\n")
 	end
