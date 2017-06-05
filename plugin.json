@@ -46,7 +46,7 @@
       "name": "interval",
       "description": "The collection interval in seconds",
       "type" : "integer",
-      "default" : 1,
+      "default" : 2,
       "required" : false
     }
   ]
