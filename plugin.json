@@ -48,6 +48,6 @@
       "type" : "integer",
       "default" : 1,
       "required" : false
-    },
+    }
   ]
 }
