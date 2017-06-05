@@ -16,13 +16,13 @@
   "postExtract" : "",
   "postExtract_lua" : "",
   "ignore" : "node_modules",
-  "metrics" : ["DUMMY_METRIC"],
+  "metrics" : ["PDH_METRIC"],
   "paramArray" : { "itemTitle" : ["metric", "counter"], "schemaTitle" : "Window Counter"},
   "paramSchema": [
     {
       "title": "Metric Name",
       "name": "metric",
-      "description": "The name of the metric the counter will be mapped to.",
+      "description": "The name of the metric the counter will be mapped to",
       "type" : "string",
       "required" : true
     },
@@ -37,9 +37,17 @@
       "title": "Factor",
       "name": "factor",
       "description": "The multiplication factor for the metric",
-      "type" : "integer",
+      "type" : "string",
       "default" : "1.0",
       "required" : false
-    }
+    },
+    {
+      "title": "Poll Interval (sec)",
+      "name": "interval",
+      "description": "The collection interval in seconds",
+      "type" : "integer",
+      "default" : 1,
+      "required" : false
+    },
   ]
 }

@@ -10,7 +10,7 @@ The TrueSight Pulse Windows Performance Counter provides a framework whereby ad-
 
 |     OS    | Linux | Windows | OS X |
 |:----------|:-----:|:-------:|:----:|
-| Supported |       |    v    |      |
+| Supported |   -   |    v    |  -   |
 
 #### TrueSight Pulse Meter versions v4.6.1 or later
 
