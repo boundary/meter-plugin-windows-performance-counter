@@ -27,7 +27,7 @@ param_file:close()
 
 local metrics = {}
 for _,item in pairs(params.items) do
-	metrics[item.metric] = {counter = item.counter, factor = item.factor}
+	metrics[item.metric] = {counter = item.counter, factor = item.factor, interval=item.interval}
 end
 
 --
@@ -37,16 +37,13 @@ end
 --
 file = io.open("plugin_pdh.ini", "w")
 
---if (params.pollInterval ~= nil) then
---    file:write("interval_sec=" .. params.pollInterval .. "\n")
---end
-file:write("interval_sec=2\n")
-
 for k, v in pairs(metrics) do
 	file:write("[".. k .. "]\n")
 	file:write("  counter=".. v.counter.."\n")
 	if (v.factor ~= nil) then
 	    file:write("  factor=".. v.factor.."\n")
+	if (v.interval ~= nil) then
+	    file:write("  interval_sec=".. v.interval.."\n")
 	end
 end
 file:close()
@@ -57,8 +54,8 @@ file:close()
 
 print ("_bevent:"..plugin_info.name.." version " .. plugin_info.version .. " Started|t:info")
 
---while true do
---	local wait = assert(io.popen('powershell sleep 60', 'r'))
---	local output = wait:read('*all')
---	wait:close()
---end
+while true do
+	local wait = assert(io.popen('powershell sleep 60', 'r'))
+	local output = wait:read('*all')
+	wait:close()
+end
