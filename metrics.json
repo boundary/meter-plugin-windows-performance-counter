@@ -1,10 +1,10 @@
 {
-  "CPU_CORE": {
+  "PDH_DUMMY": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
-    "description": "Per core CPU utilization",
-    "displayName": "Per core CPU utilization",
-    "displayNameShort": "CPU Core",
+    "description": "Placeholder for a performance counter",
+    "displayName": "Placeholder for a performance counter",
+    "displayNameShort": "PDH Placeholder",
     "isDisabled": 0,
     "unit": "percent"
   }
