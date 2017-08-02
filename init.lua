@@ -1,6 +1,7 @@
 local os = require('os')
 local io = require('io')
 local json = require('json')
+local timer = require('timer')
 
 --
 -- Read and parse the plugin file.
@@ -33,7 +34,8 @@ end
 --
 -- Create the .ini file that the meter will parse.
 -- The filename needs to be [plugin_name]_pdh.ini
---
+-- Creating the .ini file is the purpose of the plugin.
+-- What ever after this is to make sure that the plugin does not exit.
 --
 file = io.open("plugin_pdh.ini", "w")
 
@@ -49,14 +51,16 @@ for k, v in pairs(metrics) do
 end
 file:close()
 
---
--- Send our startup event
---
-
+--Start event.
 print ("_bevent:"..plugin_info.name.." version " .. plugin_info.version .. " Started|t:info")
 
-while true do
-	local wait = assert(io.popen('truesight_utils.exe sleep -s 3600', 'r'))
-	local output = wait:read('*all')
-	wait:close()
+--Dummy function to be called after every polling interval.
+--
+function dummy()
+	print("Inside dummy")
 end
+
+--Setting the polling interval. This will make sure that the dummy function is called after the specified
+--interval is expired. This is to make sure that the plugin does not exit. If the plugin exits
+--the meter will restart the plugin.
+timer.setInterval(60000, dummy)
