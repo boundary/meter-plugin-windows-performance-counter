@@ -1,5 +1,3 @@
-# pdh_test
-=======
 # TrueSight Pulse Windows Performance Counter Plugin
 
 The TrueSight Pulse Windows Performance Counter provides a framework whereby ad-hoc counter information can be collected.
@@ -33,7 +31,7 @@ None
 
 ### Dashboards
 
-None
+WIN PDH
 
 ### References
 
