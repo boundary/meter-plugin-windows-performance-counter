@@ -51,16 +51,16 @@ for k, v in pairs(metrics) do
 end
 file:close()
 
---Start event.
+--Plugin start event.
 print ("_bevent:"..plugin_info.name.." version " .. plugin_info.version .. " Started|t:info")
 
 --Dummy function to be called after every polling interval.
 --
 function dummy()
-	print("Inside dummy")
+	--Do Nothing.
 end
 
 --Setting the polling interval. This will make sure that the dummy function is called after the specified
 --interval is expired. This is to make sure that the plugin does not exit. If the plugin exits
 --the meter will restart the plugin.
-timer.setInterval(60000, dummy)
+timer.setInterval(300000, dummy)
