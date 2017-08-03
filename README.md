@@ -19,9 +19,18 @@ The TrueSight Pulse Windows Performance Counter provides a framework whereby ad-
 
 None
 
+#### Available Windows Performance counters
+We can see the available performance counters by executing the below command on the windows command prompt.
+TypePerf.exe -q
+
 ### Plugin Configuration Fields
 
-None
+|Field Name        |Description                                                         |
+|:-----------------|:-------------------------------------------------------------------|
+|Metric Name       |The name of the metric for the counter                              |
+|Counter           |The counter path for windows performance metric                     |
+|Factor            |The multiplication factor for the metric                            |
+|Poll Interval     |The collection interval in seconds                                  |
 
 ### Metrics Collected
 
