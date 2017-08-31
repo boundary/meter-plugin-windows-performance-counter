@@ -34,6 +34,12 @@ We can see the available performance counters by executing the below command on 
 TypePerf.exe -q
 
 
+#### Monitoring multiple counters
+
+We can monitor multiple counters by creating multiple instances of the plugin with each specifying one counter each. Once the meter detects the valid counters, they will be monitored and the metrics will be available in the metrics page. To view the metrics on a dashboard we may need to edit a dashboard and add the metrics to it.
+
+Note: If one of the counters specified is invalid, none of them will be shown.
+
 ### Metrics Collected
 
 |Metric Name             |Description                                                   |
