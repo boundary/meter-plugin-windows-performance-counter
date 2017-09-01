@@ -17,7 +17,7 @@
   "postExtract_lua" : "",
   "ignore" : "node_modules",
   "metrics" : ["PDH_METRIC"],
-  "paramArray" : { "itemTitle" : ["metric", "counter"], "schemaTitle" : "Window Counter"},
+  "paramArray" : { "itemTitle" : ["metric", "counter"], "schemaTitle" : "Windows Counter"},
   "paramSchema": [
     {
       "title": "Metric Name",
