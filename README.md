@@ -31,7 +31,7 @@ None
 
 #### Available Windows Performance counters
 We can see the available performance counters by executing the below command on the windows command prompt.
-TypePerf.exe -q
+TypePerf.exe -q > counters.txt
 
 
 #### Monitoring multiple counters
