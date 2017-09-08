@@ -1,7 +1,7 @@
 {
   "name" : "TrueSight Pulse Windows Performance Counter Plugin",
-  "version" : "0.9.0_1",
-  "meterVersionRequired" : "4.7.1-858",
+  "version" : "0.9.0_2",
+  "meterVersionRequired" : "4.7.0.852",
   "unsupportedPlatforms" : [ ],
   "tags" : "windows,pdh",
   "description" : "Generic specification for Windows performance counters",
