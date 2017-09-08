@@ -10,7 +10,7 @@ The Windows Performance Counter provides a framework whereby ad-hoc counter info
 |:----------|:-----:|:-------:|:----:|
 | Supported |   -   |    v    |  -   |
 
-#### TrueSight Pulse Meter versions v4.7.0.852 or later
+#### TrueSight Pulse Meter versions v4.7.0-852 or later
 Known Issue - If the Counter specified in invalid the meter would crash.
 
 - To install new meter go to Settings->Installation or [see instructions](https://help.truesight.bmc.com/hc/en-us/sections/200634331-Installation).
